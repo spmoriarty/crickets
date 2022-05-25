@@ -40,7 +40,9 @@ export async function logout() {
 }
 
 export async function getMovies() {
-    const response = await client.from()
+    const response = await client.from('Movies').select('*');
+    console.log(response);
+    return response.data;
 }
 
 // function checkError({ data, error }) {
