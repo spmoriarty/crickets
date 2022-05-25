@@ -39,6 +39,10 @@ export async function logout() {
     return (window.location.href = '../');
 }
 
+export async function getMovies() {
+    const response = await client.from()
+}
+
 // function checkError({ data, error }) {
 //     return error ? console.error(error) : data;
 // }
