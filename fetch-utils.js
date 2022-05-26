@@ -17,7 +17,7 @@ export function checkAuth() {
 
 export function redirectIfLoggedIn() {
     if (getUser()) {
-        location.replace('./auth-page');
+        location.replace('/');
     }
 }
 
@@ -36,7 +36,7 @@ export async function signInUser(email, password) {
 export async function logout() {
     await client.auth.signOut();
 
-    return (window.location.href = '../');
+    return (window.location.href = './auth-page/index.html');
 }
 
 export async function getMovies() {

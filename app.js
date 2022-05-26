@@ -1,7 +1,12 @@
-import { getMovies } from './fetch-utils.js';
+import { getMovies, logout } from './fetch-utils.js';
 import { renderMovies } from './render-util.js';
 
 const containerDisplay = document.querySelector('.container-display');
+const logoutButton = document.getElementById('logout');
+
+logoutButton.addEventListener('click', () => {
+    logout();
+});
 
 async function displayMovies() {
     const data = await getMovies();
