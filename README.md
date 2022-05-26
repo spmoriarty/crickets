@@ -46,7 +46,7 @@ Additional considerations:
     -item
     -item
     -item
--overflow scroll for movies/css
+✅overflow scroll for movies/css
 
 🤌 /Details
 -home button 

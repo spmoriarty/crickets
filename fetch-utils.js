@@ -36,7 +36,7 @@ export async function signInUser(email, password) {
 export async function logout() {
     await client.auth.signOut();
 
-    return (window.location.href = './auth-page/index.html');
+    return (window.location.href = '/');
 }
 
 export async function getMovies() {
