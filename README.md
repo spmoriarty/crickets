@@ -41,12 +41,12 @@ Additional considerations:
 ✅validate test passed 
 ✅displayMovies() validation on load
 -button for create 
--auth button
+✅auth button
 -genre dropdown menu
     -item
     -item
     -item
--overflow scroll for movies
+-overflow scroll for movies/css
 
 🤌 /Details
 -home button 
