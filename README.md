@@ -39,18 +39,20 @@ Additional considerations:
 ✅stage outerHTML
 ✅TDD renderMovies()
 ✅validate test passed 
-✅displayMovies() validation on load
--button for create 
-✅auth button
+✅displayMovies() validation on load 
 -genre dropdown menu
     -item
     -item
     -item
 ✅overflow scroll for movies/css
 
+🤌 auth button
+    ✅handle authentification
+    ✅handle logout
+
 🤌 /Details
 -home button 
--auth button
+✅auth button
 -movie details container 
 -add review button
 -movie reviews list (derived from supabase reviews table)

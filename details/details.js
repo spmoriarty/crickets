@@ -8,3 +8,7 @@ const homeButton = document.getElementById('home-button');
 authButton.addEventListener('click', () => {
     logout();
 });
+
+homeButton.addEventListener('click', () => {
+    window.location.href = '/';
+});
