@@ -1,3 +1,4 @@
+
 .container-display {
     display: flex;
     flex-direction: row;
@@ -12,8 +13,9 @@
 .movie-card {
     display: flex;
     flex-direction: column;
-    max-width: 250px;
-    max-height: fit-content;
+    justify-content: center;
+    width: 250px;
+    height: fit-content;
     border: 20px solid rgb(255, 218, 218);
     border-radius: 10px;
     margin: 10px;
@@ -23,20 +25,34 @@
     color: white;
 }
 
-/* .container-display > div {
-    transform: rotate(90deg);
-    transform-origin: right top;
-} */
-
 a {
     text-decoration: none;
     color: white;
 }
 
-.movie-card > * {
+.movie-card h2 {
     display: flex;
+    flex-direction: row;
     justify-content: center;
 }
+
+.movie-card img {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.movie-card h3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .movie-card > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
 
 /* .container-display {
     display: flex;

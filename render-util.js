@@ -3,7 +3,7 @@ export function renderMovies(movie) {
     div.classList.add('movie-card');
 
     const a = document.createElement('a');
-    a.href = '#';
+    a.href = `./details/?id=${movie.id}`;
 
     const img = document.createElement('img');
     img.src = `${movie.img}`;
@@ -18,9 +18,9 @@ export function renderMovies(movie) {
     span.classList.add('emoji');
     span.textContent = '👏';
 
+    a.append(h2, img);
     h3.append(span);
-    a.append(h2);
-    div.append(a, img, h3);
+    div.append(a, h3);
 
     return div;
 }
