@@ -52,6 +52,15 @@ export async function getMovies() {
     return response.data;
 }
 
+export async function getMoviesById(id) {
+    const response = await client
+        .from('Movies')
+        .select('*')
+        .match({ id: id })
+        .single();
+    return response.data;
+}
+
 // function checkError({ data, error }) {
 //     return error ? console.error(error) : data;
 // }
