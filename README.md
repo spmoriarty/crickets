@@ -51,7 +51,7 @@ Additional considerations:
     ✅handle logout
 
 🤌 /Details
--home button 
+✅home button 
 ✅auth button
 -movie details container 
 -add review button
