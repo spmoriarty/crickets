@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 img {
     width: 500px;
     height: fit-content;
@@ -11,7 +9,6 @@ main {
     flex-direction: column;
     align-items: center;
     background-color: rgb(225, 231, 216);
-    font-family: 'Roboto', sans-serif;
 }
 
 .container-display {
