@@ -21,6 +21,14 @@ export function redirectIfLoggedIn() {
     }
 }
 
+export async function handleAuthentication() {
+    window.location.href = '/auth-page';
+}
+
+export async function handleLogout() {
+    await logout();
+}
+
 export async function signupUser(email, password) {
     const response = await client.auth.signUp({ email, password });
 

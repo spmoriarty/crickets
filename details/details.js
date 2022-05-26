@@ -1,10 +1,10 @@
 import { logout } from '../fetch-utils.js';
 
-const logoutButton = document.getElementById('logout-button');
+const authButton = document.getElementById('auth-button');
 const homeButton = document.getElementById('home-button');
 
 // console.log(logoutButton);
 
-logoutButton.addEventListener('click', () => {
+authButton.addEventListener('click', () => {
     logout();
 });
