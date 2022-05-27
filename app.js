@@ -1,34 +1,42 @@
-import { redirectIfLoggedIn, signInUser, signupUser } from './fetch-utils.js';
+import { getMovies, getMoviesByGenre, logout, getUser, handleAuthentication, handleLogout } from './fetch-utils.js';
+import { renderMovies, renderMoviesByGenre } from './render-util.js';
 
-const signInForm = document.getElementById('sign-in');
-const signInEmail = document.getElementById('sign-in-email');
-const signInPassword = document.getElementById('sign-in-password');
+const containerDisplay = document.querySelector('.container-display');
+const authButton = document.getElementById('auth-button');
 
-const signUpForm = document.getElementById('sign-up');
-const signUpEmail = document.getElementById('sign-up-email');
-const signUpPassword = document.getElementById('sign-up-password');
+const actionGenre = document.getElementById('action-genre');
 
-// if user currently logged in, redirect
-redirectIfLoggedIn();
-
-signUpForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    const user = await signupUser(signUpEmail.value, signUpPassword.value);
-
-    if (user) {
-        redirectIfLoggedIn();
-    } else {
-        console.error(user);
-    }
+authButton.addEventListener('click', () => {
+    logout();
 });
 
-signInForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    const user = await signInUser(signInEmail.value, signInPassword.value);
-
-    if (user) {
-        redirectIfLoggedIn();
-    } else {
-        console.error(user);
+async function displayMovies() {
+    const data = await getMovies();
+    for (let movie of data) {
+        const movieDiv = renderMovies(movie);
+        containerDisplay.append(movieDiv);
     }
+    const user = getUser();
+    if (user) {
+        authButton.textContent = 'Logout';
+        authButton.addEventListener('click', handleLogout);
+    } else {
+        authButton.textContent = 'Sign In / Sign Up';
+        authButton.addEventListener('click', handleAuthentication);
+    }
+}
+
+actionGenre.addEventListener('click', async () => {
+    containerDisplay.textContent = '';
+
+    const data = await getMoviesByGenre();
+    console.log(data);
+    for (let movie of data) {
+        const movieDiv = renderMoviesByGenre(movie);
+        containerDisplay.append(movieDiv);
+    }
+    console.log('clicking the button');
 });
+
+
+displayMovies();

@@ -1,1 +1,124 @@
-/* add home page styles here */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap');
+
+
+header {
+    height: 60px;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+
+button {
+    height: fit-content;
+    position: fixed;    
+    align-self: center;
+    right: 8px;
+}
+
+/* Dropdown Styling */
+.dropdown {
+    position: fixed;
+    left: 12px;
+    padding-bottom: 16px;
+    margin: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: rgba(255, 218, 218, 0.9);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto', sans-serif;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 0px;
+    text-decoration: none;
+    font-size: 2rem;
+    opacity: 90%;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+ol, ul {
+    list-style: none;
+    margin: 0;
+}
+
+
+
+
+.container-display {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: fit-content;
+    width: 100%;
+    max-height: 650px;
+    overflow-x: scroll;
+    margin-bottom: 100px;
+}
+
+.movie-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 250px;
+    height: fit-content;
+    border: 20px solid rgb(255, 218, 218);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
+
+.movie-card a {
+    text-decoration: none;
+    color: white;
+}
+
+.movie-card h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.movie-card img {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.movie-card h3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .movie-card > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+
+/* .container-display {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: fit-content;
+    width: 650px;
+    background-color: rgb(201, 221, 202);
+    transform:rotate(-90deg) translateY(-900px);
+} */

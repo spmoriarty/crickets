@@ -24,3 +24,37 @@ Additional considerations:
     -   What needs to live in a persistence layer?
 -   Is there some state we need to initialize?
 -   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
+
+
+🤌 Supabase 
+✅setup movies table, users table, reviews table
+✅enable rls
+✅add policies 
+✅setup client in fetch utils and connect pages with script
+
+🤌 /Movies 
+✅validate redirectIfLoggedIn()
+✅getMovies()
+✅call and validate
+✅stage outerHTML
+✅TDD renderMovies()
+✅validate test passed 
+✅displayMovies() validation on load 
+-genre dropdown menu
+    -item
+    -item
+    -item
+✅overflow scroll for movies/css
+
+🤌 auth button
+    ✅handle authentification
+    ✅handle logout
+
+🤌 /Details
+✅home button 
+✅auth button
+-movie details container 
+-add review button
+-movie reviews list (derived from supabase reviews table)
+
+🤌 /Review
