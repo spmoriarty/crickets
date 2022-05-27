@@ -1,3 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap');
+
+
+header {
+    height: 60px;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+
+button {
+    height: fit-content;
+    position: fixed;    
+    align-self: center;
+    right: 8px;
+}
+
+/* Dropdown Styling */
+.dropdown {
+    position: fixed;
+    left: 12px;
+    padding-bottom: 16px;
+    margin: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: rgba(255, 218, 218, 0.9);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto', sans-serif;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 0px;
+    text-decoration: none;
+    font-size: 2rem;
+    opacity: 90%;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+ol, ul {
+    list-style: none;
+    margin: 0;
+}
+
+
+
 
 .container-display {
     display: flex;
@@ -5,7 +65,7 @@
     flex-wrap: nowrap;
     height: fit-content;
     width: 100%;
-    height: 650px;
+    max-height: 650px;
     overflow-x: scroll;
     margin-bottom: 100px;
 }
@@ -21,11 +81,10 @@
     margin: 10px;
     padding: 5px;
     background-color: black;
-    opacity: 95%;
     color: white;
 }
 
-a {
+.movie-card a {
     text-decoration: none;
     color: white;
 }

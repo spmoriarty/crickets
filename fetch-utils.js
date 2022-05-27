@@ -61,6 +61,14 @@ export async function getMoviesById(id) {
     return response.data;
 }
 
+export async function getMoviesByGenre() {
+    const response = await client
+        .from('Movies')
+        .select('*')
+        .like('genre', '%${movieGenre}%');
+    return response.data;
+}
+
 // function checkError({ data, error }) {
 //     return error ? console.error(error) : data;
 // }
