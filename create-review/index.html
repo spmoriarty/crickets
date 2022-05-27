@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="home.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <header>
+        <h1>CRICKETS</h1>
+        <button id="logout-button">Logout</button>
+        <button id="home-button">Home</button>
+    </header>
+    <main>
+        <h1></h1>
+        <div class="review-div">
+            <form id="review-form">
+                <label>Points</label>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <label>Review:</label>
+                <textarea rows="10" cols="50" placeholder="loved this movie!">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit iste reprehenderit, officia voluptatum in voluptates itaque excepturi harum possimus et suscipit consequatur eos, quae perferendis deserunt molestiae hic saepe dolores!</textarea>
+                <button>Post</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
+    </footer>
+    <script type="module" src="./create-review.js"></script>
+</body>
+
+</html>
